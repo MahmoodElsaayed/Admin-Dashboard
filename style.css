@@ -59,18 +59,116 @@ body {
     height: 100%;
 }
 
+.avatar {
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background: center center / cover no-repeat;
+}
+
+.avatar.avatar-1 {
+    background-image: var(--avatar-1);
+}
+
+.avatar.avatar-2 {
+    background-image: var(--avatar-2);
+}
+
+.avatar.avatar-3 {
+    background-image: var(--avatar-3);
+}
+
+.avatar.avatar-4 {
+    background-image: var(--avatar-4);
+}
+
+.avatar.avatar-5 {
+    background-image: var(--avatar-5);
+}
+
+/* Header's styles */
 .header {
     grid-area: header;
     background-color: var(--white, #ffffffed);
     box-shadow: var(--shadow-1);
     z-index: 3;
+    padding: 20px 40px;
 }
 
+.row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    height: 50%;
+}
+
+.row > div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.smol-bold {
+    font: 500 1.4rem "Rubik";
+}
+
+.search-container svg,
+.settings-container svg {
+    width: 24px;
+}
+
+.search-container input {
+    width: clamp(150px, 70%, 700px);
+    height: 40px;
+    padding: 5px 15px;
+    font: 400 1.6rem "Rubik";
+    border: none;
+    border-radius: 20px;
+    background-color: var(--faint-gray);
+}
+
+.search-container input:focus {
+    outline: 2px solid var(--hover-1);
+    background-color: var(--faint-blue);
+}
+
+.settings-container .avatar {
+    margin-left: 25px;
+}
+
+.profile-container .avatar {
+    width: 70px;
+    min-width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+.profile-container .big-text {
+    margin-top: 5px;
+    font: 700 2.2rem "Rubik";
+}
+
+.buttons-container .btn {
+    width: 115px;
+    height: 42px;
+    border: none;
+    border-radius: 21px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.buttons-container .btn:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+/* Sidebar's styles */
 .sidebar {
     grid-area: sidebar;
     background-color: var(--black, #000000f2);
 }
 
+/* Main's styles */
 .main {
     grid-area: main;
     background-color: var(--faint-blue, #f6f7fb);
