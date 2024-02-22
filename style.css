@@ -168,7 +168,43 @@ body {
 /* Sidebar's styles */
 .sidebar {
     grid-area: sidebar;
+    padding: 20px 35px;
     background-color: var(--black, #000000f2);
+}
+
+.sidebar>div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+    font: 400 1.8rem var(--main-font);
+    color: var(--white);
+}
+
+.sidebar svg {
+    fill: white;
+    width: 30px;
+}
+
+.logo-container p {
+    font: 600 2.6rem var(--main-font);
+}
+
+.logo-container svg {
+    width: 40px;
+    margin-left: -3px;
+}
+
+.sidebar>:nth-child(1),
+.sidebar>:nth-child(7) {
+    margin-bottom: 50px;
+}
+
+.sidebar>:not(.logo-container):hover p,
+.sidebar>:not(.logo-container):hover svg {
+    color: var(--hover-1);
+    fill: var(--hover-1);
+    cursor: pointer;
 }
 
 /* Main's styles */
