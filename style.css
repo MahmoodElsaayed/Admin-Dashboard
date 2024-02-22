@@ -319,7 +319,8 @@ body {
     width: 22px;
 }
 
-.projects-grid .card-buttons svg:hover {
+.projects-grid .card-buttons svg:hover,
+.settings-container svg:hover {
     fill: var(--hover-1);
     cursor: pointer;
 }
