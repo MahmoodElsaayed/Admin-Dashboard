@@ -242,10 +242,9 @@ body {
 .main {
     grid-area: main;
     display: grid;
-    grid-template: auto auto / 1fr 290px;
+    grid-template-columns:  1fr 290px;
     grid-template-areas:
-        "projects announcements"
-        "projects trending";
+        "projects side-content";
     gap: 25px;
     padding: 25px 50px;
     max-width: 100%;
@@ -330,18 +329,18 @@ body {
     scale: 1.007;
 }
 
-.main .announcements {
-    grid-area: announcements;
+.main .side-content {
+    grid-area: side-content;
+}
+
+.announcements {
+    margin-bottom: 30px;
 }
 
 .announcements .card .paragraph:not(:last-child) {
     margin-bottom: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid var(--faint-gray);
-}
-
-.main .trending {
-    grid-area: trending;
 }
 
 .trending .card>div {
